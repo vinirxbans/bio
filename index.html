@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vini Bio</title>
+    <link rel="stylesheet" href="vini.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Embed Do DC -->
+    <meta content="VINI Bio" property="og:title" />
+    <meta content="Bio Site Of @vinirx" property="og:description" />
+    <meta content="localhost" property="og:url" />
+    <meta content="https://i.postimg.cc/43LtcQTz/6255851743774622423-120.jpg" property="og:image" />
+    <meta content="#000000" data-react-helmet="true" name="theme-color" />
+
+    <style>
+        
+  
+    </style>
+</head>
+<body>
+    <!-- Background Video -->
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="vinigotlove.mp4" type="video/mp4" />
+        </video>
+        <!-- Background Music -->
+        <audio id="bgMusic" loop>
+            <source src="vinigotlove.mp4" type="audio/mpeg" />
+        </audio>
+    </div>
+
+    <!-- Content Section -->
+    <div class="caption">
+        <div class="card-container">
+            <div class="card">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="https://i.postimg.cc/43LtcQTz/6255851743774622423-120.jpg" alt="Logo">
+                </div>
+                <!-- Name -->
+                <div class="nick">𓆩𝗩𝗜𝗡𝗜⃟🏴‍☠️𓆪</div>
+                <!-- Links -->
+                <div class="icon-links">
+                    <a href="https://t.me/u_xjoy" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://www.youtube.com/@vinirx_bans" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://github.com/vinirxbans" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/9.3.3.1" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <!-- Song Card -->
+                <div class="song-card">
+                    <div class="song-cover">
+                        <img src="https://i.postimg.cc/43LtcQTz/6255851743774622423-120.jpg" alt="Okładka">
+                    </div>
+                    <div class="song-info">
+                        <div class="song-title">𝗩𝗜𝗡𝗜 𝗥𝗫</div>
+                        <div class="song-author">Developer × Programmer</div>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Control Button -->
+    <div class="audio-control" id="audioControl">
+        <div class="audio-icon" id="audioIcon"><i class="fas fa-volume-mute"></i></div>
+        <div class="audio-text" id="audioText">Tap To Play Music</div>
+    </div>
+
+    <script>
+        const bgMusic = document.getElementById('bgMusic');
+        const audioControl = document.getElementById('audioControl');
+        const audioIcon = document.getElementById('audioIcon');
+        const audioText = document.getElementById('audioText');
+
+        let isPlaying = false;
+
+        function toggleAudio() {
+            if (isPlaying) {
+                bgMusic.pause();
+                audioIcon.innerHTML = '<i class="fas fa-volume-mute"></i>';
+            } else {
+                bgMusic.play();
+                audioIcon.innerHTML = '<i class="fas fa-volume-up"></i>';
+            }
+            isPlaying = !isPlaying;
+        }
+
+        // Function to animate text
+        function animateText() {
+            audioText.classList.add('active');
+            setTimeout(() => {
+                audioText.classList.remove('active');
+            }, 1000);
+
+            // Repeat animation every 5 seconds
+            setTimeout(animateText, 5000);
+        }
+
+        // Initial call to animate text
+        animateText();
+
+        // Add click event listener to toggle audio
+        audioControl.addEventListener('click', toggleAudio);
+    </script>
+</body>
+</html>
+//INSTA : @9.3.3.1
+//TG : @u_xjoy
